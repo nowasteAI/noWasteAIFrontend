@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mRK-Bg-G30">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scanned Items-->
+        <scene sceneID="4AP-im-9aW">
+            <objects>
+                <viewController id="vqA-Lu-3Kz" customClass="ViewController" customModule="noWasteAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Bm-zo-Cue">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="asj-Xv-nVa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.20784313725490194" green="0.30980392156862746" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.20784313725490194" green="0.30980392156862746" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="colorCell" id="AKO-Pr-P4Y">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AKO-Pr-P4Y" id="0lU-Vb-KIC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJH-mg-oq3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GOc-ne-wNm"/>
+                        <color key="backgroundColor" red="0.20784313725490194" green="0.30980392156862746" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="asj-Xv-nVa" firstAttribute="top" secondItem="GOc-ne-wNm" secondAttribute="top" id="6GI-Vv-azW"/>
+                            <constraint firstItem="asj-Xv-nVa" firstAttribute="leading" secondItem="GOc-ne-wNm" secondAttribute="leading" id="ZA8-vf-ZKE"/>
+                            <constraint firstItem="asj-Xv-nVa" firstAttribute="trailing" secondItem="GOc-ne-wNm" secondAttribute="trailing" id="bdy-HZ-yP4"/>
+                            <constraint firstItem="asj-Xv-nVa" firstAttribute="trailing" secondItem="GOc-ne-wNm" secondAttribute="trailing" id="oLn-Hw-PpP"/>
+                            <constraint firstItem="asj-Xv-nVa" firstAttribute="leading" secondItem="GOc-ne-wNm" secondAttribute="leading" id="rMV-AQ-UVA"/>
+                            <constraint firstItem="asj-Xv-nVa" firstAttribute="bottom" secondItem="1Bm-zo-Cue" secondAttribute="bottom" id="yWc-9a-W9f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scanned Items" id="J7o-ss-X4r">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera.fill" catalog="system" changesSelectionAsPrimaryAction="YES" id="EZs-qO-Xae">
+                            <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                            <connections>
+                                <action selector="cameraTapped:" destination="vqA-Lu-3Kz" id="IkJ-HC-R0V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navBar" destination="J7o-ss-X4r" id="9ev-tc-Y4e"/>
+                        <outlet property="tableView" destination="asj-Xv-nVa" id="GmO-Pg-kxd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KNX-cT-uLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="-1011.1607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cPa-jd-kNz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mRK-Bg-G30" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j5h-cw-v8Z">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="labelColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vqA-Lu-3Kz" kind="relationship" relationship="rootViewController" id="BYO-t0-VV0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HV7-ov-3re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-819" y="-1011"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.20784313725490194" green="0.30980392156862746" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
